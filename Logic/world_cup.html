@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine(qtd){
+        for(var i=0; i<qtd; i++){
+            document.write("<br>");
+        }
+    }
+
+    function show(showText){
+        document.write(showText);
+        skipLine();
+    }
+
+    var ano=1930;
+
+    do{
+        document.write("<h4>Teve copa no ano de " +ano +"</h4>");
+        skipLine();
+        ano+=4;
+    }while(ano<=2018)
+
+
+</script>

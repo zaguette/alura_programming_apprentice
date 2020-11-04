@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine(qtd){
+        for(var i=0; i<qtd ; i++){
+            document.write("<br>");
+        }
+    }
+
+    function show(showText){
+        document.write(showText);
+        skipLine();
+    }
+
+    var time = prompt("Digite aqui o nome do seu time: ");
+    var vitoriaPassado = parseInt(prompt("Digite a quantidade de vitoridas do "+ time + " no ano passado"));
+    var empatePassado = parseInt(prompt("Digite a quantidade de empates do "+ time + " no ano passado"));
+
+    var pontosPassado = (vitoriaPassado*3) + (empatePassado);
+
+    show("<h4>A quantidade total de pontos do " + time + " no ano passado é de " + pontosPassado);
+
+    var vitoria = parseInt(prompt("Digite a quantidade de vitoridas do "+ time + " neste ano"));
+    var empate = parseInt(prompt("Digite a quantidade de empates do "+ time + " neste ano"));
+
+    var pontos = (vitoria*3) + (empate);
+
+    show("<h4>A quantidade total de pontos do " + time + " neste ano é de " + pontos + "<br>Equivalente a " + (pontos/pontosPassado)*100 + " %.</h4>");
+
+    if(pontosPassado == pontos){
+        show("<h4> " + time + "está com a mesma quantidade de pontos que o ano passado </h4>");
+    } else if(pontosPassado < pontos){
+        show("<h4> " + time + "está melhor do que o ano passado </h4>");
+    }else{
+        show("<h4> " + time + "está pior do que o ano passado </h4>");
+    }
+
+</script>

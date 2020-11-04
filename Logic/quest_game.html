@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine(qtd){
+        for(var i=0; i<qtd ; i++){
+            document.write("<br>");
+        }
+    }
+
+    function show(showText){
+        alert(showText);
+        skipLine();
+    }
+
+    var randomNumber = Math.round(Math.random()*10);
+
+    do{
+        var guestNumber = parseInt(prompt("Qual número você acredita que seja? "));
+
+        if(guestNumber < randomNumber){
+            show("O numero é maior do que " + guestNumber);
+        }else if(guestNumber > randomNumber){
+            show("O numero é menor do que " + guestNumber);
+        }else{
+            show("O numero "+ randomNumber + " é igual ao número " + guestNumber + " advinhado");
+        }
+        
+    }while(randomNumber!=guestNumber);
+    
+
+</script>

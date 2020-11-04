@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare aqui com o segredo:</button>
+<br>
+
+<script>
+    var entrada = document.querySelector("input");
+    var segredo = Math.round(Math.random()*10);
+    entrada.focus();
+    document.queryCommandValue("input")
+
+    function verifica(){
+        if(entrada.value == segredo){
+        alert("Parabéns, você descobriu o segredo!");
+        }else if(entrada.value < segredo){
+        alert("O segredo é maior do que " + entrada.value);
+        entrada.focus();
+        }else{
+        alert("O segredo é menor do que " + entrada.value);
+        entrada.focus();
+        }
+        entrada.value="";
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+    
+</script>

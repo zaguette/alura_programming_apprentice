@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+    //A proposta desse código será imprimir os números pares de 0 até 100
+
+    function skipLine(qtd){
+        for(var i=0; i<qtd; i++){
+            document.write("<br>");
+        }
+    }
+
+    function show(showText){
+        document.write(showText);
+        skipLine();
+    }
+
+    var limite = parseInt(prompt("Digite o limite superior que deseja: "));
+    var i=0;
+    
+    while(i<=limite){
+        show("<h4>Numero: " + i + "</h4>");
+        i+=2;
+    }
+
+</script>

@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function skipLine (qtd){
+        for(var i=0; i < qtd; i++){
+            document.write("<br>");
+        }
+    }
+
+    function show(stringShow){
+        document.write(stringShow);
+    }
+
+    show("<h3>Álcool ou Gasolina</h3>");
+    skipLine(2);
+    var tanque = 40;
+    var caminhoGasolina = 480;
+    var consumoGasolina = caminhoGasolina/tanque;
+
+    show("<h4>O consumo de combustível com gasolina foi de: " + consumoGasolina + " km/L </h4>");
+
+    //document.write("<h4>O consumo de combustível com gasolina foi de: " + consumoGasolina + " km/L </h4>");
+    skipLine(1);
+
+    var caminhoAlcool = 300;
+    var consumoAlcool = caminhoAlcool/tanque;
+
+    show("<h4>O consumo de combustível com gasolina foi de: " + consumoAlcool + " km/L </h4>");
+    //document.write("<h4>O consumo de combustível com gasolina foi de: " + consumoAlcool + " km/L </h4>");
+    skipLine(5);
+    show("Teste de linha");
+</script>

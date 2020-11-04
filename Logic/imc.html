@@ -1,0 +1,50 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine(qtd){
+        for(var i=0; i<qtd ; i++){
+            document.write("<br>");
+        }
+    }
+
+    function show(showText){
+        document.write(showText);
+        skipLine();
+    }
+
+    function calculateimc(weight, height, name){
+        var imc = weight/(height*height);
+        show("<h4>The MCI of " + name +  " is: </h4>" + Math.round(imc));
+        return(imc);
+    }
+
+    var weightMarcelo = 106;
+    var heightMarcelo = 1.75;
+    var nameMarcelo = "Marcelo";
+    var imcMarcelo = calculateimc(weightMarcelo,heightMarcelo,nameMarcelo);
+
+    var weightFriend = 68;
+    var heightFriend = 1.72;
+    var nameFriend = "Friend";
+    var imcFriend = calculateimc(weightFriend, heightFriend, nameFriend);
+
+    show("<h4>The sum of IMCs is " + Math.round(imcMarcelo+imcFriend));
+
+    var weightInformed = prompt("Informe seu peso: ");
+    var heightInformed = prompt("Informe sua altura: ");
+    var nameInformed =  prompt("Informe seu nome: ");
+    var imcInformed = calculateimc(weightInformed, heightInformed, nameInformed);
+
+    skipLine(1);
+    
+    if(imcInformed <18.5){   
+        show("The IMC is " + Math.round(imcInformed) + ", you're under limit of 18.5 and 35");
+    }else if(imcInformed >= 18.5 && imcInformed <= 35){
+        show("The IMC is "+ Math.round(imcInformed)+ ", that means that you're okay");
+    }else{
+        show("The IMC is, " + Math.round(imcInformed) + ", that means you're pretty fat, go to the gymn");
+    }
+
+
+
+</script>
